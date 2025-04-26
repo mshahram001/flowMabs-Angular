@@ -1,0 +1,95 @@
+<mat-toolbar color="primary" class="toolbar">
+    <div class="header-area">
+
+        <div class="left-header-area">
+            <ng-container *ngFor="let menuItem of menuData">
+              <!-- If item has submenu -->
+              <ng-container *ngIf="menuItem.submenu; else noSubmenu">
+                <button mat-button [matMenuTriggerFor]="menuItemMenu">{{ menuItem.label }}</button>
+          
+                <mat-menu #menuItemMenu="matMenu">
+                  <ng-container *ngFor="let subItem of menuItem.submenu">
+                    <ng-container *ngIf="subItem.submenu; else subItemOnly">
+                      <button mat-menu-item [matMenuTriggerFor]="subItemMenu">{{ subItem.label }}</button>
+                      <mat-menu #subItemMenu="matMenu">
+                        <button mat-menu-item *ngFor="let subSubItem of subItem.submenu"
+                                [routerLink]="subSubItem.link">
+                          {{ subSubItem.label }}
+                        </button>
+                      </mat-menu>
+                    </ng-container>
+          
+                    <ng-template #subItemOnly>
+                      <button mat-menu-item [routerLink]="subItem.link">
+                        {{ subItem.label }}
+                      </button>
+                    </ng-template>
+                  </ng-container>
+                </mat-menu>
+              </ng-container>
+          
+              <!-- If top-level item has no submenu (like 'Contact Us') -->
+              <ng-template #noSubmenu>
+                <button mat-button [routerLink]="menuItem.link">{{ menuItem.label }}</button>
+              </ng-template>
+            </ng-container>
+          </div>
+
+        <div class="right-header-area">
+            <button mat-button type="button" (click)="openLoginDialog()">
+                <i class="fa fa-sign-in-alt fa-lg" aria-hidden="true"></i> Login/Register
+            </button>
+            <button mat-button type="button" (click)="openCartDialog()">
+                <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>
+
+
+
+
+
+
+
+<div class="second-header-area">
+    <div class="row">
+        <div class="col-xs-12 col-md-2 company-div-logo">
+                <img class="company-logo" routerLink="/home" src="/assets/images/company-logo.png">
+        </div>
+
+        <div class="col-xs-12 col-md-8 search-header">
+            <mat-form-field class="info-form-field password-field" appearance="outline">
+                <input type="text" placeholder="Search here..." aria-label="text" matInput [formControl]="myControl"
+                    [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    @for (option of filteredOptions | async; track option) {
+                    <mat-option [value]="option">{{option}}</mat-option>
+                    }
+                </mat-autocomplete>
+                <button type="button" mat-icon-button matSuffix class="tableAction-button"
+                    style="margin-right: 4px !important;">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </mat-form-field>
+        </div>
+
+        <div class="col-xs-12 col-md-2 header-align-content"  (mouseenter)="openPanel()"
+            (mouseleave)="closePanelWithDelay()">
+            <span style="padding-right: 5px;">{{countryName}}</span>
+            <span>
+                <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+            </span>
+
+            <div *ngIf="isPanelVisible" class="panel">
+                <div *ngFor="let country of panelData" class="country-item" (click)="selectCountry(country)">
+                    <span class="country-flag">{{country.flag}}</span>
+                    <span class="country-name">{{country.name}}</span>
+                    <span class="country-currency">{{country.currency}}</span>
+                </div>
+
+                <p>If your country is not listed, click here for <a href=""><strong>Worldwide Ordering</strong></a></p>
+            </div>
+        </div>
+    </div>
+</div>

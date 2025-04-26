@@ -1,0 +1,138 @@
+
+
+body {
+    font-family: 'Arimo', sans-serif;
+  }
+
+  .mat-card{
+    margin: 20px;
+  }
+
+  .container-fluid{
+    min-height: 500px;
+    margin-right: 25px !important;  
+    margin-left: 25px !important;
+  }
+
+  .container-fluid div{
+    font-size: 13px;
+  }
+
+  .container-fluid table th td{
+    font-size: 13px;
+  }
+
+.button-icon{
+  padding-right: 4px;
+}
+
+.SubHead{
+    border-bottom: 1px solid black;
+    padding: 4px 0px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+ .mat-mdc-raised-button {
+    border-radius: 8px !important;
+}
+
+.content{
+    margin: 128px 20px 20px 20px;
+}
+
+.tableAction-button{
+    margin: 0px !important;
+    padding: 0px !important;
+    height: 31px !important;
+    width: 33px !important;
+}
+
+.mat-mdc-option .mdc-list-item__primary-text{
+    font-size: 12px !important;
+    min-height: 30px !important;
+}
+
+a{
+color: blue;
+cursor: pointer;
+}
+
+a:hover{
+    color: #0086cb;
+    cursor: pointer;
+}
+
+.mat-mdc-raised-button.submit-button {
+    background-color: #00AAFF !important; /* Default Purple */
+    color: white !important;
+    font-weight: normal !important;
+  }
+  
+  .mat-mdc-raised-button.submit-button:hover {
+    background-color: #006699 !important; /* Hover Effect */
+    color: white !important;
+  }
+  
+  .mat-mdc-raised-button.submit-button:focus {
+    background-color: #00AAFF !important; /* Focus Effect */
+  }
+  
+  .mat-mdc-raised-button.submit-button.submit-button:active {
+    background-color: #0086cb !important; /* Active Effect */
+  }
+  
+  .mat-mdc-raised-button.back-button {
+    background-color: #0088CC !important; /* Default Gray */
+    color: white !important;
+    font-weight: normal !important;
+  }
+  
+  .mat-mdc-raised-button.back-button:hover {
+    background-color: #00AAFF !important; /* Hover Effect */
+  }
+  
+  .mat-mdc-raised-button.back-button:focus {
+    background-color: #0088CC !important; /* Focus Effect */
+  }
+  
+  .mat-mdc-raised-button.back-button:active {
+    background-color: #0086cb !important; /* Active Effect */
+  }
+  
+  .toolbar, .second-header-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+    background: white; /* Adjust based on your theme */
+  }
+  
+  .second-header-area {
+    top: 40px; /* Adjust this value based on the toolbar height */
+    z-index: 999; /* Ensure it stays below the toolbar */
+  }
+
+  /* Width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;  /* Vertical scrollbar */
+    height: 8px; /* Horizontal scrollbar */
+  }
+  
+  /* Scrollbar Track */
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4; /* Light gray background */
+    border-radius: 10px;
+  }
+  
+  /* Scrollbar Thumb (the moving part) */
+  ::-webkit-scrollbar-thumb {
+    background: #2196f3; /* Purple thumb */
+    border-radius: 10px;
+  }
+  
+  /* Hover effect on Scrollbar */
+  ::-webkit-scrollbar-thumb:hover {
+  background: #2196f3; /* Darker purple on hover */
+}
