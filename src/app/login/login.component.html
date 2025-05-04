@@ -1,0 +1,43 @@
+<div class="register-container">
+    <div class="register-left">
+      <img src="/assets/images/login-image.jpg" alt="Illustration" />
+    </div>
+  
+    <div class="register-right">
+      <h2>Welcome back to Flow mAbs!</h2>
+      <p class="subtitle">Login your account</p>
+  
+      <form class="register-form" [formGroup]="loginRegisterForm">
+
+        <mat-label>Username <span class="asterik-mark">*</span></mat-label>
+        <mat-form-field appearance="outline" class="login-form-field">
+            <button type="button" matPrefix class="bg-transparent border-0 icon-button">
+                <i class="fa-solid fa-user-tie"></i>
+            </button>
+          <input matInput formControlName="userName" placeholder="Enter here" type="text"/>
+          <mat-error *ngIf="loginRegisterForm.get('userName')?.hasError('required')">
+            Username is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-label>Password <span class="asterik-mark">*</span></mat-label>
+        <mat-form-field appearance="outline" class="login-form-field">
+            <button type="button" matPrefix class="bg-transparent border-0 icon-button">
+                <i class="fa-solid fa-lock"></i>
+            </button>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter here" formControlName="password" />
+            <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()" class="tableAction-button" style="margin-right: 4px !important;">
+              <i class="fas" [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"></i>
+            </button>
+            <mat-error *ngIf="loginRegisterForm.get('password')?.hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+        </mat-form-field>
+  
+        <button mat-raised-button type="submit" class="submit-button">
+            <i class="fa-solid fa-right-to-bracket" style="padding-right: 4px;"></i>Login
+        </button>
+      </form>
+    </div>
+  </div>
+  

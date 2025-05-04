@@ -1,0 +1,62 @@
+.filter-input-field{
+    float: right;
+}
+
+::ng-deep .filter-input-field .mat-mdc-form-field-subscript-wrapper{
+    height: 0px !important;
+}
+
+::ng-deep .filter-input-field .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+  }
+  
+  ::ng-deep .filter-input-field .mat-mdc-form-field-infix {
+    min-height: 13px !important;
+  }
+  
+  ::ng-deep .filter-input-field .mdc-text-field--outlined {
+    --mdc-outlined-text-field-outline-color: rgb(223, 219, 219) !important;
+    background-color: white !important;
+    border-radius: 4px !important;
+  }
+
+  .leftpaginatorArea{
+    width: 37%;
+  }
+
+  .rightPaginatorArea{
+    width: 61%;
+    align-content: center;
+  }
+
+  .no-dataRow{
+    width: 100%;
+  }
+
+  .no-dataCell{
+    padding: 10px;
+  }
+
+  ::ng-deep .table-form-field .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+  
+  ::ng-deep .table-form-field .mat-mdc-form-field-infix {
+    min-height: 13px !important;
+  }
+  
+  .table-form-field {
+    width: 90px;
+    margin-right: 10px;
+  }
+  
+  ::ng-deep .table-form-field .mdc-text-field--outlined {
+    --mdc-outlined-text-field-outline-color: rgb(223, 219, 219) !important;
+    height: 30px;
+  }
+
+  ::ng-deep .table-form-field .mat-mdc-form-field-subscript-wrapper{
+    height: 0px !important;
+}

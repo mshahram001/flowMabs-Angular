@@ -18,6 +18,15 @@ body {
     margin: 0
 }
 
+.border-0{
+    border: none;
+}
+
+.bg-transparent{
+    background: none;
+}
+
+
 article,
 aside,
 details,

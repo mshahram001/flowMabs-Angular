@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -8,7 +9,21 @@ import { map, Observable, startWith } from 'rxjs';
   standalone: false,
   
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
+  animations: [
+    trigger('fadeInLeft', [
+      transition(':enter', [
+        style({ opacity: 0, clipPath: 'inset(0 100% 0 0)' }),
+        animate('1s ease-out', style({ opacity: 1, clipPath: 'inset(0 0 0 0)' }))
+      ])
+    ]),
+    trigger('fadeInRight', [
+      transition(':enter', [
+        style({ opacity: 0, clipPath: 'inset(0 100% 0 0)' }),
+        animate('1s ease-out', style({ opacity: 1, clipPath: 'inset(0 0 0 0)' }))
+      ])
+    ])
+  ]
 })
 export class HomeComponent {
   myControl = new FormControl('');
@@ -17,6 +32,7 @@ export class HomeComponent {
   countryName: string = 'United States';
   currentItemId: string | null = null;
   cloneResult: string = '1-11-23';
+
   headingName = [
     { heading: 'Spark Plus Antibodies', content: 'Some content for Spark Plus Antibodies', link: '/home/spark-dyes' },
     { heading: 'TotalSeq™ Hashtags', content: 'Some content for TotalSeq Hashtags', link: '/home/totalseq' },

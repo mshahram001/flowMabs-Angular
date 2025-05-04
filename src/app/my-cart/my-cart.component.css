@@ -1,0 +1,15 @@
+.cart-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .cart-button-container button{
+      margin: 0px;
+  }
+
+  .signup-button {
+    background-color: #FFD700;
+    font-weight: normal;
+  }

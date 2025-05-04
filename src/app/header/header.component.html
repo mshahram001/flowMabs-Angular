@@ -36,10 +36,8 @@
           </div>
 
         <div class="right-header-area">
-            <button mat-button type="button" (click)="openLoginDialog()">
-                <i class="fa fa-sign-in-alt fa-lg" aria-hidden="true"></i> Login/Register
-            </button>
-            <button mat-button type="button" (click)="openCartDialog()">
+          <button mat-button><i class="fa-solid fa-user-tie" style="padding-right: 8px;"></i>{{userName}}</button>
+            <button mat-button type="button" (click)="openCart()">
                 <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
             </button>
         </div>

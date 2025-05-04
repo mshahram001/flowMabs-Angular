@@ -1,0 +1,58 @@
+    <div class="register-container">
+        <div class="register-left">
+          <img src="/assets/images/login-image.jpg" alt="Illustration" />
+        </div>
+      
+        <div class="register-right">
+          <div class="text-end">
+            <span>Already have an account?</span>
+            <button mat-button color="primary" type="button" (click)="login()">SIGN IN</button>
+          </div>
+      
+          <h2>Welcome to Flow mAbs!</h2>
+          <p class="subtitle">Register your account</p>
+      
+          <form class="register-form" [formGroup]="registrationForm">
+
+            <mat-label>Name <span class="asterik-mark">*</span></mat-label>
+            <mat-form-field appearance="outline" class="login-form-field">
+                <button type="button" matPrefix class="bg-transparent border-0 icon-button">
+                    <i class="fa-solid fa-user-tie"></i>
+                </button>
+              <input matInput formControlName="name" placeholder="Enter here" type="text"/>
+              <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
+                Name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+      
+            <mat-label>Email <span class="asterik-mark">*</span></mat-label>
+            <mat-form-field appearance="outline" class="login-form-field">
+                <button type="button" matPrefix class="bg-transparent border-0 icon-button">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+              <input matInput formControlName="email" placeholder="Enter here" type="email"/>
+              <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">
+                Email is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+      
+            <mat-label>Password <span class="asterik-mark">*</span></mat-label>
+            <mat-form-field appearance="outline" class="login-form-field">
+                <button type="button" matPrefix class="bg-transparent border-0 icon-button">
+                    <i class="fa-solid fa-lock"></i>
+                </button>
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter here" formControlName="password" />
+                <button mat-icon-button matSuffix type="button" (click)="togglePasswordVisibility()" class="tableAction-button" style="margin-right: 4px !important;">
+                  <i class="fas" [ngClass]="hide ? 'fa-eye-slash' : 'fa-eye'"></i>
+                </button>
+                <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">
+                  Password is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+      
+            <button mat-raised-button type="submit" class="submit-button">
+                <i class="fa-solid fa-file-export" style="padding-right: 4px;"></i>Register</button>
+          </form>
+        </div>
+      </div>
+      

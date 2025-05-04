@@ -8,6 +8,22 @@ body {
     margin: 20px;
   }
 
+  .mat-mdc-card{
+    min-height: 500px;
+    padding: 20px;
+  }
+
+  .title-header{
+    border-bottom: 1.5px solid black;
+    padding: 5px 0px;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+ .container-fluid .text-right{
+  text-align: right;
+}
+
   .container-fluid{
     min-height: 500px;
     margin-right: 25px !important;  
@@ -41,11 +57,12 @@ body {
     margin: 128px 20px 20px 20px;
 }
 
-.tableAction-button{
+ .tableAction-button{
     margin: 0px !important;
     padding: 0px !important;
     height: 31px !important;
     width: 33px !important;
+    font-size: 15px !important;
 }
 
 .mat-mdc-option .mdc-list-item__primary-text{
@@ -56,6 +73,10 @@ body {
 a{
 color: blue;
 cursor: pointer;
+}
+
+.asterik-mark{
+  color: red;
 }
 
 a:hover{
@@ -135,4 +156,66 @@ a:hover{
   /* Hover effect on Scrollbar */
   ::-webkit-scrollbar-thumb:hover {
   background: #2196f3; /* Darker purple on hover */
+}
+
+/* CSS for paginator */
+.mat-mdc-paginator{
+  display: inline-flex !important;
+  background-color: #1b6489 !important;
+  color: white !important;
+}
+
+.paginator{
+  background-color: #1b6489;
+  padding: 5px 0px;
+  display: inline-flex;
+}
+
+.paginator .mat-mdc-select-arrow{
+  color: white !important;
+}
+
+.paginator .mat-mdc-paginator-icon {
+  fill: white !important;
+}
+
+.paginator .mat-mdc-select-value{
+  color: white !important;
+}
+
+.paginator .mdc-text-field--outlined {
+  --mdc-outlined-text-field-outline-color: white !important;
+}
+/* CSS for paginator */
+
+.mat-mdc-header-row{
+  background-color: #29b2f9 !important;
+  height: 50px !important;
+  color: white !important;
+}
+
+.mat-mdc-header-cell{
+  border-right: 1px solid white !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+.mat-mdc-header-cell:last-child{
+  border-right: none !important;
+}
+
+.mat-sort-header-arrow svg {
+  color: white !important;
+}
+
+.mat-mdc-row{
+  height: 35px !important;
+}
+
+.mat-mdc-row:nth-child(even){
+  background-color: white;
+}
+
+.mat-mdc-row:nth-child(odd){
+  background-color: #f2f2f2f2;
 }

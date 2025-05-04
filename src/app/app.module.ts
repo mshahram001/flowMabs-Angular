@@ -17,9 +17,11 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Import components
 import { LayoutComponent } from './layout/layout.component';
-import { HeaderComponent , LoginDialogComponent, MyCartDialogComponent} from './header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,7 +30,7 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     LayoutComponent,
-    HeaderComponent, MyCartDialogComponent, LoginDialogComponent, HomeComponent, FooterComponent
+    HeaderComponent, HomeComponent, FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,8 @@ import { FooterComponent } from './footer/footer.component';
     MatAutocompleteModule,
     CommonModule,
     MatCardModule,
+    MatTableModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideAnimationsAsync()

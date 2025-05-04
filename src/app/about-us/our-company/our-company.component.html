@@ -1,5 +1,6 @@
-<div class="ourcompany-container">
-    <div class="row">
+<mat-card>
+    <!-- Our Company Container -->
+    <div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ourcompany-header">
             <h1>Our Company</h1>
             <p>
@@ -7,4 +8,33 @@
             </p>
         </div>
     </div>
-</div>
+    <!-- Our Company Container -->
+
+    <!-- Blogs & Videos Container -->
+    <div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 blogVideo-header">
+            <h1>Blogs and Videos</h1>
+            <p>
+                Check out our blogs and videos to stay up to date on the latest protocols, technical tips, and trends in science and biology.
+            </p>
+        </div>
+    </div>
+
+    <div class="blog-title">
+        <h3>The Latest Blog Post</h3>
+    </div>
+
+    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12">
+        <div class="card-container">
+            <div class="sub-card col-xs-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let card of cards">
+                <div class="text-content">
+                    <h2 class="blog-header">{{ card.title }}</h2>
+                    <p>{{ card.description }}</p>
+                </div>
+                <a mat-button class="blog-link" color="primary">{{ card.linkText }}</a>
+            </div>
+        </div>
+    </div>
+    <!-- Blogs & Videos Container -->
+
+</mat-card>
